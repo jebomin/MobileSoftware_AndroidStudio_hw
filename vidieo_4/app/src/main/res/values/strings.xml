@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MyFourthApp</string>
+    <string name="title">Android App Programming</string>
+    <string name="button1">Broadcast Now</string>
+</resources>

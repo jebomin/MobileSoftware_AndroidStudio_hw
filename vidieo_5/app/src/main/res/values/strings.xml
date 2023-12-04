@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MyFifthApp</string>
+    <string name="title">Android App Programming</string>
+    <string name="name">name</string>
+    <string name="s_id">student id</string>
+    <string name="p_number">phone number</string>
+    <string name="addstudent">Add Student</string>
+    <string name="getinfo">Get Student Info</string>
+</resources>

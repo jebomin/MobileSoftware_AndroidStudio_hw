@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MyThirdApp</string>
+    <string name="title">Service Example</string>
+    <string name="subTitle">Service Start and Stop Practice</string>
+    <string name="button1">SERVICE START</string>
+    <string name="button2">SEARVICE STOP</string>
+</resources>

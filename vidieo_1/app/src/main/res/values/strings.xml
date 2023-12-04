@@ -1,0 +1,7 @@
+<resources>
+    //모든 문자는 여기에 다 몰아서 넣어라
+    <string name="app_name">MyFirstApp</string>
+    <string name="app_contents">Hello, Everyone!!</string>
+    <string name="edit_message">메시지를 입력하세요</string>
+    <string name="button_send">보내기</string>
+</resources>
