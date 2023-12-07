@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MyEighthApp</string>
+    <string name="GetGPS">Get Current GPS</string>
+</resources>
