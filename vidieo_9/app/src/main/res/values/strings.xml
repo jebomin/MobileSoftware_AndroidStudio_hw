@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Internet Connection</string>
+    <string name="button_text">Image Download</string>
+    <string name="image_address">https://img.hani.co.kr/imgdb/resize/2018/1206/154399168653_20181206.JPG</string>
+</resources>
