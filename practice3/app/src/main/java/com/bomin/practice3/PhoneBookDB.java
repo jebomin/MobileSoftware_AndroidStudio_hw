@@ -82,4 +82,27 @@ public class PhoneBookDB extends SQLiteOpenHelper {
             Toast.makeText(context, "Successfully", Toast.LENGTH_SHORT).show();
         }
     }
+
+    /**
+     * 연락처 수정
+     * @param id 아이디
+     * @param name 이름
+     * @param phone_number 전화번호
+     */
+    public void updateData(String id, String name, String phone_number){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+
+        //수정할 값
+        cv.put(COLUMN_NAME, name);
+        cv.put(COLUMN_PHONE_NUMBER, phone_number);
+
+        long result = db.update(TABLE_NAME, cv, "_id=?", new String[]{id});
+
+        if(result == -1){
+            Toast.makeText(context, "Failed", Toast.LENGTH_SHORT).show();
+        }else{
+            Toast.makeText(context, "Successfully", Toast.LENGTH_SHORT).show();
+        }
+    }
 }
