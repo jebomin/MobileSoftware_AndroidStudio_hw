@@ -47,22 +47,22 @@ public class ToDoDB extends SQLiteOpenHelper {
         db = this.getWritableDatabase();
     }
 
-    /**
-     * 할일 전체 가져오기
-     * @return
-     */
+    //할일 전체 가져오기
     public ArrayList<ToDoModel> getAllTasks(){
 
         ArrayList<ToDoModel> taskList = new ArrayList<>();
-        Cursor cursor = null;
+
+        Cursor cursor  = null;
 
         String query = "SELECT * FROM " + TABLE_NAME;
-        openDatabase();
+
+        db = this.getReadableDatabase();
 
         if(db != null){
+
             cursor = db.rawQuery(query, null);
 
-            while (cursor.moveToNext()){
+            while(cursor.moveToNext()){
 
                 ToDoModel task = new ToDoModel();
 
@@ -72,6 +72,7 @@ public class ToDoDB extends SQLiteOpenHelper {
                 taskList.add(task);
             }
         }
+
         return taskList;
     }
 
@@ -80,7 +81,7 @@ public class ToDoDB extends SQLiteOpenHelper {
      * 할일 추가
      * @param task 할일
      */
-    public void AddTask(ToDoModel task){
+    public void addTask(ToDoModel task){
 
         openDatabase();
         SQLiteDatabase db = this.getWritableDatabase();
