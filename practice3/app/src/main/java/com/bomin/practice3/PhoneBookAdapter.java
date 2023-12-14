@@ -1,6 +1,7 @@
 package com.bomin.practice3;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.view.LayoutInflater;
@@ -48,6 +49,19 @@ public class PhoneBookAdapter extends RecyclerView.Adapter<PhoneBookAdapter.MyVi
         byte[] phoneImage = phone.getUser_image(); //사진
         Bitmap bitmap = BitmapFactory.decodeByteArray(phoneImage, 0, phoneImage.length);
         holder.imageView.setImageBitmap(bitmap);
+
+        //상세화면 이동
+        holder.mainLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, DetailActivity.class);
+                intent.putExtra("id",           phone.getPhone_id());
+                intent.putExtra("name",         phone.getPhone_name());
+                intent.putExtra("phone_number", phone.getPhone_number());
+                intent.putExtra("image",        phoneImage);
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
